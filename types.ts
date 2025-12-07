@@ -16,6 +16,14 @@ export interface Experience {
   description: string[];
 }
 
+export interface Education {
+  id: string;
+  degree: string;
+  institution: string;
+  period: string;
+  grade?: string;
+}
+
 export interface Skill {
   name: string;
   level: number; // 0-100

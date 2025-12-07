@@ -1,7 +1,7 @@
 import React from 'react';
-import { HERO_DATA } from '../constants';
+import { HERO_DATA, SOCIAL_LINKS } from '../constants';
 import Button from './Button';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Mail } from 'lucide-react';
 
 interface HeroProps {
   onNavigate: (page: string) => void;
@@ -43,9 +43,8 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           </div>
 
           <div className="mt-12 flex justify-center gap-6 text-slate-500 animate-slide-up opacity-0" style={{ animationDelay: '0.5s' }}>
-             <a href="#" className="hover:text-indigo-400 transition-colors"><Github size={24} /></a>
-             <a href="#" className="hover:text-indigo-400 transition-colors"><Linkedin size={24} /></a>
-             <a href="#" className="hover:text-indigo-400 transition-colors"><Mail size={24} /></a>
+             <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors"><Github size={24} /></a>
+             <a href={SOCIAL_LINKS.email} className="hover:text-indigo-400 transition-colors"><Mail size={24} /></a>
           </div>
         </div>
       </div>

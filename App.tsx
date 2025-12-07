@@ -31,7 +31,7 @@ const App: React.FC = () => {
     { id: 'home', label: 'Home' },
     { id: 'projects', label: 'Projects' },
     { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
+    { id: 'experience', label: 'Resume' },
     { id: 'contact', label: 'Contact' },
   ];
 

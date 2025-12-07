@@ -37,6 +37,8 @@
       }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- html2pdf.js for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
       html {
         scroll-behavior: smooth;
@@ -48,6 +50,36 @@
       ::-webkit-scrollbar-track { background: #0f172a; }
       ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
       ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+      /* Print Styles */
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        #resume-content, #resume-content * {
+          visibility: visible;
+        }
+        #resume-content {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          background: white;
+          color: black;
+          box-shadow: none;
+        }
+        /* Hide buttons during print if they are inside the content */
+        .no-print {
+          display: none !important;
+        }
+        /* Ensure background colors print */
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+      }
     </style>
   <script type="importmap">
 {
